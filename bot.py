@@ -2,7 +2,7 @@ import os
 from dotenv import load_dotenv
 import discord
 from discord.ext import commands
-from paramiko import runCommandSSH
+from connect import runCommandSSH
 
 intents = discord.Intents.default()
 intents.message_content = True
