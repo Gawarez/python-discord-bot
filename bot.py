@@ -21,6 +21,7 @@ async def run(ctx, commandSSH):
   except discord.HTTPException:
     await ctx.send("Exceção: Sem dados para retornar!")
 
+# Basicamente um 'echo', retorna o que o user envia
 @bot.command()
 async def echo(ctx, *args):
   arguments = ' '.join(args)
