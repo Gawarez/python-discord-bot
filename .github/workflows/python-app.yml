@@ -4,7 +4,7 @@
 name: Python application
 on:
   push:
-    branches: [ "gh-actions" ]
+    branches: [ "dev" ]
   pull_request:
     branches: [ "dev" ]
 
