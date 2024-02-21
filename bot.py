@@ -22,7 +22,7 @@ async def run(ctx, commandSSH):
     await ctx.send("Exceção: Sem dados para retornar!")
 
 @bot.command()
-async def reply(ctx, *args):
+async def echo(ctx, *args):
   arguments = ' '.join(args)
   await ctx.send(arguments)
 
