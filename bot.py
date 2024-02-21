@@ -12,12 +12,14 @@ TOKEN = os.getenv('TOKEN')
 
 bot = commands.Bot(command_prefix='$', intents=intents)
 
-# Pelo amor de deus não rodar isso sem saber
-# nem com privilégio root
-# @bot.command()
-# async def rodar(ctx, commandSSH):
-#   response = runCommandSSH(commandSSH)
-#   await ctx.send(response)
+# Pelo amor de deus não rodar isso como root
+@bot.command()
+async def run(ctx, commandSSH):
+  response = runCommandSSH(commandSSH)
+  try:
+    await ctx.send(response)
+  except discord.HTTPException:
+    await ctx.send("Exceção: Sem dados para retornar!")
 
 @bot.command()
 async def reply(ctx, *args):
